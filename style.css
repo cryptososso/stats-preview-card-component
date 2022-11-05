@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   display: flex;
+   height: 100vh;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: 15px;
+   font-family: 'Inter', sans-serif;
+   font-family: 'Lexend Deca', sans-serif;
+   background: hsl(233, 47%, 7%);
+}
+
+.container{
+   width: 1100px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   background-color: hsl(244, 38%, 16%);
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+
+.container .image{
+   width: 50%;
+   height: 400px;
+   background-image: url('./images/image-header-desktop.jpg');
+   background-size: cover;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+   filter: contrast(1.1) brightness(1.12);
+}
+
+.container .image{
+   position: relative;
+}
+
+.container .image::after{
+   position: absolute;
+   content: '';
+   display: block;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background : linear-gradient(to bottom, rgb(255,0,134)0%, rgb(255, 0, 255) 100%);
+   mix-blend-mode: overlay;
+}
+
+.container main{
+   width: 50%;
+   height: 350px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+   padding: 30px;
+   background-color: hsl(244, 38%, 16%);
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+}
+
+.container main h1{
+   color:hsl(0, 0%, 100%);
+   font-size: 2em;
+   width: 400px;
+}
+
+.container main span{
+  color:hsl(277, 64%, 61%) ;
+}
+
+.container main p{
+   color:  hsla(0, 0%, 100%, 0.75);
+   line-height: 1.6;
+   font-size: 1em;
+   margin-top: 10px;
+   width: 400px;
+}
+
+.container main .stat{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   width: 350px;
+}
+
+.container main .stats{
+   text-align: center;
+   margin-left: -20px;
+}
+
+
+.container main .stat h3{
+   color: hsla(0, 0%, 100%, 0.6);
+   font-weight: 700;
+}
+
+.container main .stat small{
+   color: hsla(0, 1%, 66%, 0.75);
+}
+
+
+
+.attribution 
+   { font-size: 15px; 
+      text-align: center; 
+      margin-top: 25px;
+      color: #fff;
+   }
+   
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+  
+@media only screen and (max-width: 1140px){
+   .container{
+      width: 375px;
+      display: flex;
+      flex-direction: column;
+   }
+
+.container .image{
+   width: 100%;
+   height: 30vh;
+   background-image: url('./images/image-header-mobile.jpg');
+   order: 1;
+}
+
+.container main{
+   width: 100%;
+   height: 60vh;
+   flex: 1;
+   order: 2;
+   text-align: center;
+}
+
+.container main h1{
+   font-size: 1.8em;
+   width: 300px;
+   margin-bottom: 30px;
+}
+
+.container main p{
+   font-size: 1em;
+   width: 300px;
+   margin-bottom: 30px;
+}
+
+.container main .stat{
+   flex-direction: column;
+}
+
+.container main .stats{
+   text-align: center;
+   margin: 20px;
+}
+
+.container main .stat h3{
+   color: hsla(0, 0%, 100%, 0.6);
+   font-weight: 700;
+   font-size: 1.5em;
+}
+
+}
